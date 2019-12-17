@@ -7,20 +7,26 @@
 		<section class="background--white">
 			<h3>Web component Input</h3>
 			<input-field
-				label="Input in Vue"
-				:value="message"
-				@bindValue="message = $event.detail"
+				label="First name"
+				:value="form.firstName"
+				@bindValue="form.firstName = $event.detail"
+			></input-field>
+			<input-field
+				label="Last name"
+				:value="form.lastName"
+				@bindValue="form.lastName = $event.detail"
 			></input-field>
 		</section>
 
 		<section class="background--champagne">
 			<h3>Default HTML Input</h3>
-			<input v-model="message" />
+			<input v-model="form.firstName" />
+			<input v-model="form.lastName" />
 		</section>
 		<section class="background--blue">
-			<p>
-				Message: <strong>{{ message }}</strong>
-			</p>
+			<strong
+				><pre>{{ JSON.stringify(form) }}</pre></strong
+			>
 		</section>
 	</div>
 </template>
@@ -29,7 +35,10 @@
 export default {
 	name: "app",
 	data: () => ({
-		message: "Vue Example"
+		form: {
+			firstName: "Vue",
+			lastName: "Example"
+		}
 	})
 };
 </script>
@@ -47,6 +56,16 @@ body {
 section {
 	padding: 2rem;
 }
+input-field + input-field {
+	margin-top: 1rem;
+}
+input-field {
+	display: block;
+}
+input-field + input-field {
+	margin-top: 1rem;
+}
+
 .background--champagne {
 	color: #2800a0;
 	background-color: #f3e5d8;
