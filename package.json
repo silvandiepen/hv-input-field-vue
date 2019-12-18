@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"core-js": "^3.4.3",
-		"hv-input-field": "git+ssh://git@github.com/silvandiepen/hv-input-field.git",
+		"hv-styleguide": "git+ssh://git@github.com/silvandiepen/hv-styleguide.git",
 		"vue": "^2.6.10"
 	},
 	"devDependencies": {

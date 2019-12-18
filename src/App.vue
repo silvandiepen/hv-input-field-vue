@@ -6,16 +6,16 @@
 
 		<section class="background--white">
 			<h3>Web component Input</h3>
-			<input-field
+			<hv-input-text
 				label="First name"
 				:value="form.firstName"
 				@bindValue="form.firstName = $event.detail"
-			></input-field>
-			<input-field
+			></hv-input-text>
+			<hv-input-text
 				label="Last name"
 				:value="form.lastName"
 				@bindValue="form.lastName = $event.detail"
-			></input-field>
+			></hv-input-text>
 		</section>
 
 		<section class="background--champagne">
@@ -39,7 +39,11 @@ export default {
 			firstName: "Vue",
 			lastName: "Example"
 		}
-	})
+	}),
+	mounted() {
+		/* eslint-disable */
+		console.log(this);
+	}
 };
 </script>
 
@@ -56,13 +60,10 @@ body {
 section {
 	padding: 2rem;
 }
-input-field + input-field {
-	margin-top: 1rem;
-}
-input-field {
+hv-input-text {
 	display: block;
 }
-input-field + input-field {
+hv-input-text + hv-input-text {
 	margin-top: 1rem;
 }
 
