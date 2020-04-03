@@ -10,7 +10,6 @@
 	},
 	"dependencies": {
 		"core-js": "^3.4.3",
-		"hv-styleguide": "git+ssh://git@github.com/silvandiepen/hv-styleguide.git",
 		"vue": "^2.6.10"
 	},
 	"devDependencies": {
@@ -21,6 +20,7 @@
 		"eslint": "^5.16.0",
 		"eslint-plugin-react": "^7.17.0",
 		"eslint-plugin-vue": "^5.0.0",
+		"hv-styleguide": "^0.0.1",
 		"vue-template-compiler": "^2.6.10"
 	},
 	"eslintConfig": {
